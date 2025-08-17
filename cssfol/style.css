@@ -1,0 +1,73 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+  
+nav.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s ease-out;
+}
+.hero.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+}
+.skill-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+.skill-icon:hover {
+  transform: scale(1.1);
+}
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+.social-icon {
+  width: 30px;
+  margin: 0 8px;
+  transition: transform 0.3s;
+}
+.social-icon:hover {
+  transform: scale(1.2);
+}
+/* Dark mode styles */
+.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+.dark-mode nav.navbar {
+  background-color: #1f1f1f !important;
+}
+.dark-mode .card {
+  background-color: #1f1f1f;
+  color: #eee;
+}
