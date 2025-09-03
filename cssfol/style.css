@@ -23,6 +23,7 @@ nav.navbar.scrolled {
   opacity: 0;
   transform: translateY(20px);
   transition: 0.6s ease-out;
+  background: linear-gradient(135deg,#f8f9fa, #e3f2fd);
 }
 .hero.visible {
   opacity: 1;
@@ -108,4 +109,26 @@ perspective: 1000px;
 }
 .flip-card-back .btn {
   margin-top: 15px;
+}
+.profile-img{
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border:4px solid #0d6efd;
+  transition:transform 0.3s ease, box-shadow0.3s ease;
+}
+.profile-img:hover{
+  transform: scale(1.05)
+  rotate(2deg);
+  box-shadow: 0 8px 20px
+  rgba(0,0,0,0.2);
+}
+h1{
+  font-size: 2.5rem;
+  font-weight: bold;
+  animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+from{opacity:0; transform:translateY(20px);}
+to { opacity: 1; transform: translateY(0);}  
 }
